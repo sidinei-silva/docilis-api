@@ -1,0 +1,5 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "eslint.format.enable": true, // Desativar o GitLens na linha atual
+    "editor.formatOnSave": true // Formatar automaticamente ao salvar
+}

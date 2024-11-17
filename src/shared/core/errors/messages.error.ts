@@ -14,4 +14,9 @@ export const ErrorMessages = {
     maxLength: (field: string, length: number) => `${field} não pode ter mais de ${length} caracteres.`,
     email: 'O formato do email é inválido.',
   },
+  admin: {
+    emailAlreadyExists: 'Já existe um administrador cadastrado com este email.',
+    notFound: 'Administrador não encontrado.',
+    invalidCredentials: 'Credenciais inválidas.',
+  },
 };
