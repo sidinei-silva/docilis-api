@@ -12,9 +12,12 @@ import { AdminJwtStrategy } from './strategies/admin-jwt.strategy';
 import { APP_GUARD } from '@nestjs/core';
 import { AdminJwtGuard } from './guards/admin-jwt.guard';
 import { AdminSignUseCase } from './usecases/admin-sign.usecase';
+import { ConfectionerModule } from '../confectioner/confectioner.module';
+import { ConfectionerSignUseCase } from './usecases/confectioner-sign.usecase';
 
 @Module({
   imports: [
+    ConfectionerModule,
     AdminModule,
     PassportModule,
     JwtModule.registerAsync({
@@ -26,6 +29,11 @@ import { AdminSignUseCase } from './usecases/admin-sign.usecase';
     }),
   ],
   controllers: [AuthController],
-  providers: [AdminJwtStrategy, { provide: APP_GUARD, useClass: AdminJwtGuard }, AdminSignUseCase],
+  providers: [
+    AdminJwtStrategy,
+    { provide: APP_GUARD, useClass: AdminJwtGuard },
+    AdminSignUseCase,
+    ConfectionerSignUseCase,
+  ],
 })
 export class AuthModule {}

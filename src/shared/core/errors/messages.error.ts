@@ -19,4 +19,9 @@ export const ErrorMessages = {
     notFound: 'Administrador não encontrado.',
     invalidCredentials: 'Credenciais inválidas.',
   },
+  confectioner: {
+    emailAlreadyExists: 'Já existe um confeiteiro cadastrado com este email.',
+    notFound: 'Confeiteiro não encontrado.',
+    invalidCredentials: 'Credenciais inválidas.',
+  },
 };
